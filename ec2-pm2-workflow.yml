@@ -5,7 +5,7 @@ pm2 logs <id>
 git branch
 ###############################steps
 ls
-move to folder to project 
+move to folder of project 
 install runner from github action->runner->linux->commands
 ###After connecting runner start runner with this command not with ./run.sh
 sudo ./svc.sh install
