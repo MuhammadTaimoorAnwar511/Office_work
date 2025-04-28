@@ -1,0 +1,55 @@
+##########Commands
+nvm use 20
+pm2 ls
+pm2 logs <id>
+
+###After connecting runner
+sudo ./svc.sh install
+sudo ./svc.sh start
+#############
+name: Deploying <description>
+
+on:
+  push:
+    branches:
+      - <branch name> 
+jobs:
+  deploy:
+
+    runs-on: [self-hosted,<runner name>] 
+
+    env:
+      PM2_PROCESS_NAME: "<pm2 process name>"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          clean: False
+
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.18.2'
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Install pm2
+        run: npm install pm2 -g
+
+
+      - name: Create Build
+        run: npm run build   
+
+
+      - name: Start or Reload the Application
+        run: |
+          if pm2 list | grep -q "$PM2_PROCESS_NAME"; then
+            echo "Process $PM2_PROCESS_NAME exists. Reloading..."
+            pm2 reload "$PM2_PROCESS_NAME"
+          else
+            echo "Process $PM2_PROCESS_NAME does not exist. Starting..."
+            pm2 start "PORT=<port> npm start" --name "$PM2_PROCESS_NAME"
+          fi
