@@ -1,7 +1,8 @@
 #########################################TomiBrowser-mainnet-beta-change(REACT)##################################################################################################
 origin:  oregon
 branch:  mainnet-beta-change
-PublicIPs:  35.91.79.19 
+PublicIPs:  35.91.79.19
+-----------------------------
 pm2 ls
 pm2 logs <id>
 pm2 delete <id>
