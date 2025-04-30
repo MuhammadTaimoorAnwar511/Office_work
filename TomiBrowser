@@ -1,0 +1,14 @@
+#########################################TomiBrowser-mainnet-beta-change(REACT)##################################################################################################
+origin:  oregon
+branch:  mainnet-beta-change
+PublicIPs:  35.91.79.19 
+pm2 ls
+pm2 logs <id>
+pm2 delete <id>
+create mkdir <name of directory>
+cd to directory 
+git branch
+git clone -b <branch name> <git url> or git pull
+To create and run pm2 process:
+pm2 start "serve -s build -l 3001" --name Tomitask-mainnet-beta-change
+##################################################################################################################################################################################
