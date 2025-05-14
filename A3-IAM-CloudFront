@@ -1,0 +1,35 @@
+Bucket name:----
+uncheck:Block all public access
+leavle every thing default and create bucket 
+go to s3 bucket
+bucket>permission?bucketpolicy>generator
+-
+Select Type of Policy: s3
+Effect:Allow
+Principal: *
+Actions: GET OBJECT
+Amazon Resource Name (ARN):bucket arn and also add / *
+---
+go to cloud front
+Distribution options : single
+Origin domain: s3 bucket
+Origin access: Origin access control settings (recommended)
+choose WAF
+COPY BUCKET POLICY
+and paste it in s3 bucket
+---
+go to iam and user and create new 
+enter username:
+click next
+select attach policy directly
+from policy name select s3 full acces
+click next
+create
+go to user >security >enable console acces
+create access keys
+select others
+
+
+
+
+
