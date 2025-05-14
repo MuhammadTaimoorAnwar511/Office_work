@@ -28,6 +28,10 @@ create
 go to user >security >enable console acces
 create access keys
 select others
+create acces keys and same them
+---
+go to ACM generate certificate for them
+add to route 53 and go to cloud front general and edit and add domain
 
 
 
