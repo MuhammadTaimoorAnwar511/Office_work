@@ -1,4 +1,15 @@
 ###############################Commands
+sudo apt update
+node -v
+sudo apt install nodejs -y
+npm -v
+sudo apt install npm -y
+pm2 -v
+sudo npm install -g serve pm2
+after configuring ec2 runner:
+sudo ./svc.sh install
+sudo ./svc.sh start
+
 nvm use 20
 pm2 ls
 pm2 logs <id>
