@@ -1,4 +1,4 @@
 aws configure (which cli user is connected)
-aws configure --profile=ecs-ecr-user (to create new user for cli access)
+aws configure --profile=<user name> (to create new user for cli access)
 cat ~/.aws/credentials (list of current cli users)
-export AWS_PROFILE=ecs-ecr-user (to switch user)
+export AWS_PROFILE=<user name> (to switch user)
