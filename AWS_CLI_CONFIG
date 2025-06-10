@@ -1,5 +1,11 @@
+sudo apt update
+sudo apt upgrade
+sudo apt-get install awscli
+aws configure
+===============
 aws configure (which cli user is connected)
 aws configure --profile=<user name> (to create new user for cli access)
 cat ~/.aws/credentials (list of current cli users)
 cat ~/.aws/config see configuration
 export AWS_PROFILE=<user name> (to switch user)
+aws sts get-caller-identity (to check user identity)
