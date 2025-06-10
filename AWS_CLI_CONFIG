@@ -1,4 +1,5 @@
 aws configure (which cli user is connected)
 aws configure --profile=<user name> (to create new user for cli access)
 cat ~/.aws/credentials (list of current cli users)
+cat ~/.aws/config see configuration
 export AWS_PROFILE=<user name> (to switch user)
