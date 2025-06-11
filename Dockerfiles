@@ -69,7 +69,9 @@ services:
 # Optional: Define a default network (Docker Compose does this automatically)
 networks:
      micro-service:
-====
+===
+COMPOSE which localy build images first
+===
 version: '3.8'
 
 services:
