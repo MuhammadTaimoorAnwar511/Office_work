@@ -1,0 +1,9 @@
+git pull 
+cd folder
+npm i
+ls -al
+cp .env.example .env
+move to folder containing index.js
+pm2 start "node index.js" --name vesting-script
+pm2 logs 
+pm2 save 
