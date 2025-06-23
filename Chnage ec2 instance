@@ -1,0 +1,21 @@
+Type:
+first stop instance
+select the instance
+go to action change instance type select new type
+start instance 
+ip will be change
+EBS VOLUME:
+select instance 
+go to volumes
+select volume 
+go to action increase volume size 
+and connect to isntance 
+commands:
+df -h
+sudo lsblk
+on chrome search:
+increase ebs size ec2
+URL: https://docs.aws.amazon.com/ebs/latest/userguide/recognize-expanded-volume-linux.html
+RUN Commands based on xen or nitro
+sudo lsblk 
+ip will not change 
