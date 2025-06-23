@@ -1,0 +1,35 @@
+LINK: https://phoenixnap.com/kb/linux-scp-command
+
+Step 1: Connect to the Remote Server
+Open your terminal and log in to the Golden Loonie server: 
+ssh root@147.93.94.61
+Server password: @f/b@2U&ize0Rvs+DYYl
+Switch to the ubuntu user: su ubuntu
+Navigate to the home directory: cd
+Change into the Dumps folder (create it if it doesn't exist): 
+mkdir Dumps
+cd Dumps
+Run the pwd command to copy the full path of the Dumps folder. This is where we’ll upload the database dump file: pwd
+Step 2: Transfer the Dump File from Local to Remote
+Open a new terminal  on your local machine.
+Copy the latest dump file from your local system to the remote server using scp: 
+scp /Users/appletech/Downloads/dump-golden_loonie-202506231533.sql  root@147.93.94.61:/home/ubuntu/Dumps/
+Explanation:
+scp: Secure copy command
+First argument: Path to the dump file on your local system
+Second argument: user@remote_ip:/remote/path/ where you want to place the file
+Use the same password as in Step 1 when prompted
+(Optional) Run the following in server terminal to check your remote IP address: hostname -I
+Step 3: Import the Dump into MySQL on the Remote Server
+Go back to the remote server terminal.
+Navigate to the Dumps folder and verify that the file was copied successfully: 
+cd Dumps
+ls
+Log in to MySQL: mysql -u root -p
+ MySQL credentials:
+Username: root
+Password: password
+List available databases: SHOW DATABASES;
+Choose and use the target database: USE <database_name>;
+Exit MySQL and run the following command to import the dump file: 
+mysql -u root -p golden_loonie < dump-golden_loonie-202506231533.sql
