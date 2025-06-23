@@ -4,7 +4,7 @@ npm i
 ls -al
 cp .env.example .env
 move to folder containing index.js
-PORT=5000 pm2 start "node index.js" --name vesting-script
+PORT=5000 pm2 start "src/index.js" --name vesting-script
 or
 pm2 start --name vestingScript src/index.js # will work 
 
