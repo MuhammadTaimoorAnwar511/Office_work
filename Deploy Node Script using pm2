@@ -6,7 +6,7 @@ cp .env.example .env
 move to folder containing index.js
 PORT=5000 pm2 start "node index.js" --name vesting-script
 or
-pm2 start --name vestingScript src/index.js
+pm2 start --name vestingScript src/index.js # will work 
 
 pm2 logs 
 pm2 save 
