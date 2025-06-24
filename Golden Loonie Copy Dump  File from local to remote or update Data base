@@ -2,8 +2,8 @@ LINK: https://phoenixnap.com/kb/linux-scp-command
 
 Step 1: Connect to the Remote Server
 Open your terminal and log in to the Golden Loonie server: 
-ssh root@147.93.94.61
-Server password: @f/b@2U&ize0Rvs+DYYl
+ssh root@<ip>
+Server password: <password>
 Switch to the ubuntu user: su ubuntu
 Navigate to the home directory: cd
 Change into the Dumps folder (create it if it doesn't exist): 
